@@ -12,6 +12,17 @@ public class MonkeyShooter extends Actor
      * Act - do whatever the MonkeyShooter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private GreenfootImage[] differentArrow;
+    
+    public MonkeyShooter()
+    {
+        differentArrow = new GreenfootImage[10];
+        int i = differentArrow.length;
+        while(i > 0)
+        {
+            differentArrow[i] = new GreenfootImage("specialArrow" + i + ".png");
+        }
+    }
     
     public void move()
     {

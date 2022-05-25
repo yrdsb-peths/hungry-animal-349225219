@@ -18,6 +18,8 @@ public class TheArrow extends Actor
         setRotation(270);
     }
     
+    MyWorld world = (MyWorld) getWorld();
+    
     
     public void act()
     {
