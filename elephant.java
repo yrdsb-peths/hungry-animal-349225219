@@ -1,24 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class elephant here.
+ * Write a description of class Elephant here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class elephant extends Actor
+public class Elephant extends Actor
 {
-    String name;
-    public animal(String name1)
-    {
-        name = name1;
-    }
-    
-    
+    /**
+     * Act - do whatever the Elephant wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
-        // Add your action code here.
-        move(-1);
-        
+        move(1);
     }
 }
