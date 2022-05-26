@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Welcome extends World
 {
-    Label title = new Label("Welcome to the Monkey Shooter!", 50);
-
+    Label title = new Label("Welcome to the Monkey Shooter!", 40);
+    Label tips = new Label("To start, press your space bar!", 40);
     /**
      * Constructor for objects of class Welcome.
      * 
@@ -17,8 +17,10 @@ public class Welcome extends World
     public Welcome()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
-        addObject(title,640,360);
+        super(853, 480, 1); 
+        addObject(title,425,240);
+        addObject(tips,425,330);
+        setBackground(new GreenfootImage("openingPage.png"));
     }
     
     public void act()

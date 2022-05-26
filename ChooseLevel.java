@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ChooseLevel extends World
 {
     Label choose = new Label("Choose your level of diffculty", 50);
-    Label chooseLevel = new Label("press e to choose easy, press h to choose hard", 50);
+    Label chooseLevel = new Label("press h to choose hard, press e to choose easy", 50);
     /**
      * Constructor for objects of class ChooseLevel.
      * 
@@ -20,7 +20,7 @@ public class ChooseLevel extends World
         super(1280, 720, 1); 
         addObject(choose, 640, 360);
         addObject(chooseLevel, 640, 450);
-        
+        setBackground(new GreenfootImage("heavenOrHell.jpg"));
     }
     
     public void act()
