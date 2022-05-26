@@ -12,16 +12,27 @@ public class MonkeyShooter extends Actor
      * Act - do whatever the MonkeyShooter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private GreenfootImage[] differentArrow;
+    private GreenfootImage[] differentArrow = new GreenfootImage[2];
+    private GreenfootImage[] faceRight = new GreenfootImage[9];
+    private GreenfootImage[] faceLeft = new GreenfootImage[9];
+    boolean faceLeftOrNot = true;
+    int stepCheck = 0;
+    private SimpleTimer timer = new SimpleTimer();
+    
     
     public MonkeyShooter()
     {
-        differentArrow = new GreenfootImage[10];
-        int i = differentArrow.length;
-        while(i > 0)
-        {
-            differentArrow[i] = new GreenfootImage("specialArrow" + i + ".png");
+        for(int i = 0; i < faceRight.length; i++){
+            faceRight[i] = new GreenfootImage("actor" + i + ".png");
+            faceRight[i].mirrorHorizontally();
+            
+            faceLeft[i] =new GreenfootImage("actor" + i + ".png");
+            setImage(faceLeft[0]);
+            timer.mark();
+    
         }
+        
+        
     }
     
     public void move()
@@ -29,18 +40,38 @@ public class MonkeyShooter extends Actor
         MyWorld w = (MyWorld)getWorld();
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-2);
-            w.positionXMonkey -= 2;
+            move(-4);
+            w.positionXMonkey -= 4;
+            faceLeftOrNot = true;
         }
         if(Greenfoot.isKeyDown("d"))
         {
-            move(2);
-            w.positionXMonkey += 2;
+            move(4);
+            w.positionXMonkey += 4;
+            faceLeftOrNot = false;
+            
         }
     }
     
     public void act()
     {
         move();
+        if(timer.millisElapsed() < 100)
+        {
+            return;
+        }
+        if(faceLeftOrNot == true && Greenfoot.isKeyDown("a"))
+        {
+            setImage(faceLeft[stepCheck]);
+            stepCheck++;
+            stepCheck %= 3;
+        }
+        else if(faceLeftOrNot == false && Greenfoot.isKeyDown("d"))
+        {
+            setImage(faceRight[stepCheck]);
+            stepCheck++;
+            stepCheck %= 3;
+        }
+        timer.mark();
     }
 }

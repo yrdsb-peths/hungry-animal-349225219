@@ -15,17 +15,22 @@ public class MyWorld extends World
      */
     public int positionXMonkey;
     public int positionYMonkey;
+    private SimpleTimer timer = new SimpleTimer();
+    
 
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(852, 480, 1); 
+        super(852, 480, 1,false); 
         setBackground(new GreenfootImage("background.png"));
         positionXMonkey = 400;
         positionYMonkey = 400;
+        
+        timer.mark();
     
         MonkeyShooter monkey = new MonkeyShooter();
         addObject(monkey, positionXMonkey, positionYMonkey);
+        createBallon();
         
     }
     
@@ -36,12 +41,25 @@ public class MyWorld extends World
         
     }
     
+    public void createBallon()
+    {
+        Ballon ballon = new Ballon();
+        int x = Greenfoot.getRandomNumber(852);
+        int y = 0;
+        addObject(ballon, x, y);
+    }
+    
     public void beingShot()
+    {
+        if(Greenfoot.isKeyDown("space"))
         {
-            if(Greenfoot.isKeyDown("space"))
+            if(timer.millisElapsed() > 500)
             {
                 TheArrow arrow = new TheArrow();
                 addObject(arrow, positionXMonkey, positionYMonkey);
+                timer.mark();
             }
+            
         }
+    }
 }

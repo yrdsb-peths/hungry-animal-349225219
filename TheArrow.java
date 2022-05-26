@@ -13,16 +13,26 @@ public class TheArrow extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    MyWorld world = (MyWorld) getWorld();
+    GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
+    
+    
     public TheArrow()
     {
         setRotation(270);
     }
     
-    MyWorld world = (MyWorld) getWorld();
     
     
     public void act()
     {
         move(3);
+        if(isTouching(Ballon.class))
+        {
+            removeTouching(Ballon.class);
+            ballonBlow.play();
+            MyWorld w = (MyWorld)getWorld();
+            w.createBallon();
+        }
     }
 }
