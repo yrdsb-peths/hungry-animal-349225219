@@ -17,7 +17,16 @@ public class Welcome extends World
     public Welcome()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 300, 1); 
-        addObject(title,300,150);
+        super(1280, 720, 1); 
+        addObject(title,640,360);
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("space"))
+        {
+            ChooseLevel newWorld = new ChooseLevel();
+            Greenfoot.setWorld(newWorld);
+        }
     }
 }
