@@ -27,12 +27,12 @@ public class ChooseLevel extends World
     {
         if(Greenfoot.isKeyDown("e"))
         {
-            MyWorld easy = new MyWorld();
+            TeachingEasy easy = new TeachingEasy();
             Greenfoot.setWorld(easy);
         }
         if(Greenfoot.isKeyDown("h"))
         {
-            MyWorld1 hard = new MyWorld1();
+            TeachingHard hard = new TeachingHard();
             Greenfoot.setWorld(hard);
         }
     }
