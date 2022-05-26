@@ -17,22 +17,27 @@ public class TheArrow extends Actor
     GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
     
     
+    
     public TheArrow()
     {
         setRotation(270);
     }
     
-    
-    
-    public void act()
+    public void hit()
     {
-        move(3);
         if(isTouching(Ballon.class))
         {
             removeTouching(Ballon.class);
             ballonBlow.play();
             MyWorld w = (MyWorld)getWorld();
             w.createBallon();
+            w.increaseScore();
         }
+    }
+    
+    public void act()
+    {
+        move(3);
+        hit();
     }
 }

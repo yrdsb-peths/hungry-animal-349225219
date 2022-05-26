@@ -16,6 +16,8 @@ public class MyWorld extends World
     public int positionXMonkey;
     public int positionYMonkey;
     private SimpleTimer timer = new SimpleTimer();
+    public int score = 0;
+    Label theScore;
     
 
     public MyWorld()
@@ -25,6 +27,8 @@ public class MyWorld extends World
         setBackground(new GreenfootImage("background.png"));
         positionXMonkey = 400;
         positionYMonkey = 400;
+        theScore = new Label(0,50);
+        addObject(theScore, 20, 20);
         
         timer.mark();
     
@@ -34,6 +38,11 @@ public class MyWorld extends World
         
     }
     
+    public void increaseScore()
+    {
+        score++;
+        theScore.setValue(score);
+    }
     
     public void act()
     {

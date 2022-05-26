@@ -16,12 +16,13 @@ public class Ballon extends Actor
     public Ballon()
     {
         ballon.scale(50,50);
+        setRotation(270);
         setImage(ballon);
     }
     
     public void act()
     {
-        setRotation(270);
+        
         move(-1);
     }
 }
