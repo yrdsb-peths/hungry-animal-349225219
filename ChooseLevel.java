@@ -20,5 +20,20 @@ public class ChooseLevel extends World
         super(1280, 720, 1); 
         addObject(choose, 640, 360);
         addObject(chooseLevel, 640, 450);
+        
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("e"))
+        {
+            MyWorld easy = new MyWorld();
+            Greenfoot.setWorld(easy);
+        }
+        if(Greenfoot.isKeyDown("h"))
+        {
+            MyWorld1 hard = new MyWorld1();
+            Greenfoot.setWorld(hard);
+        }
     }
 }

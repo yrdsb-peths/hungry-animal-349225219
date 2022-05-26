@@ -1,35 +1,33 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TheArrow here.
+ * Write a description of class TheHarderArrow here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TheArrow extends Actor
+public class TheHarderArrow extends Actor
 {
     /**
-     * Act - do whatever the TheArrow wants to do. This method is called whenever
+     * Act - do whatever the TheHarderArrow wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
     MyWorld world = (MyWorld) getWorld();
     GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
     
-    
-    
-    public TheArrow()
+    public TheHarderArrow()
     {
         setRotation(270);
+        setImage("arrow.png");
     }
     
     public void hit()
     {
-        if(isTouching(Ballon.class))
+        if(isTouching(TheHarderBallon.class))
         {
-            removeTouching(Ballon.class);
+            removeTouching(TheHarderBallon.class);
             ballonBlow.play();
-            MyWorld w = (MyWorld)getWorld();
+            MyWorld1 w = (MyWorld1)getWorld();
             w.createBallon();
             w.increaseScore();
         }
@@ -39,7 +37,5 @@ public class TheArrow extends Actor
     {
         move(3);
         hit();
-        
-        
     }
 }
