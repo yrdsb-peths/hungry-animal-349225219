@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-    Label endGame = new Label("too bad, didn't make it, the game is over:(", 50);
+    Label endGame = new Label("too bad, didn't make it:(", 60);
     /**
      * Constructor for objects of class GameOver.
      * 
@@ -16,7 +16,8 @@ public class GameOver extends World
     public GameOver()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1);
-        addObject(endGame, 640, 360);
+        super(800, 533, 1);
+        addObject(endGame, 400, 100);
+        setBackground(new GreenfootImage("gameOver.jpg"));
     }
 }

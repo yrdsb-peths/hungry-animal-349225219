@@ -33,6 +33,7 @@ public class MyWorld1 extends World
         MonkeyShooterHarder monkey = new MonkeyShooterHarder();
         addObject(monkey, positionXMonkeyH, positionYMonkeyH);
         createBallon();
+        createRock();
         
     }
     
@@ -40,6 +41,14 @@ public class MyWorld1 extends World
     {
         GameOver world = new GameOver();
         Greenfoot.setWorld(world);
+    }
+    
+    public void createRock()
+    {
+        FallingRock rock = new FallingRock();
+        int x = Greenfoot.getRandomNumber(700) + 50;
+        int y = 0;
+        addObject(rock, x, y);
     }
     
     public void increaseScore()
@@ -57,7 +66,7 @@ public class MyWorld1 extends World
     public void createBallon()
     {
         TheHarderBallon ballon = new TheHarderBallon();
-        int x = Greenfoot.getRandomNumber(800);
+        int x = Greenfoot.getRandomNumber(700) + 50;
         int y = 0;
         addObject(ballon, x, y);
     }

@@ -27,7 +27,7 @@ public class TheHarderBallon extends Actor
         
         move(-1);
         direction = Greenfoot.getRandomNumber(3) - 1;
-        setLocation(getX() - 4*direction, getY());
+        setLocation(getX() - 5*direction, getY());
         MyWorld1 w = (MyWorld1)getWorld();
         if(getY() >= w.getHeight())
         {
