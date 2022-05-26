@@ -18,6 +18,7 @@ public class MyWorld extends World
     private SimpleTimer timer = new SimpleTimer();
     public int score = 0;
     Label theScore;
+    int level = -1;
     
 
     public MyWorld()
@@ -48,7 +49,13 @@ public class MyWorld extends World
     {
         score++;
         theScore.setValue(score);
+        if(score % 5 == 0)
+        {
+            level--;
+        }
     }
+    
+    
     
     public void act()
     {
@@ -59,6 +66,7 @@ public class MyWorld extends World
     public void createBallon()
     {
         Ballon ballon = new Ballon();
+        ballon.increaseSpeed(level);
         int x = Greenfoot.getRandomNumber(852);
         int y = 0;
         addObject(ballon, x, y);

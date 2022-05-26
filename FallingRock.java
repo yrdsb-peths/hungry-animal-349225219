@@ -14,7 +14,7 @@ public class FallingRock extends Actor
      */
     public FallingRock()
     {
-        setImage("
+        setImage("rock.png");
     }
     
     public void fall()
@@ -25,5 +25,15 @@ public class FallingRock extends Actor
     public void act()
     {
         fall();
+        MyWorld1 w = (MyWorld1)getWorld();
+        if(isTouching(MonkeyShooterHarder.class))
+        {
+            w.gameOver();
+        }
+        if(getY() == 480)
+        { 
+            
+            w.createRock();
+        }
     }
 }

@@ -59,13 +59,13 @@ public class MonkeyShooterHarder extends Actor
                 w.positionYMonkeyH -= 4;
             }
         }
-        if(Greenfoot.isKeyDown("S"))
+        if(Greenfoot.isKeyDown("s"))
         {
             
             if(getY() <= 400)
             {
                 setLocation(getX(), getY() + 4);
-                w.positionXMonkeyH += 4;
+                w.positionYMonkeyH += 4;
             }
         }
         

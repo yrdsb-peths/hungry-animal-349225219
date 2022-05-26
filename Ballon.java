@@ -13,6 +13,8 @@ public class Ballon extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage ballon = new GreenfootImage("ballon.png");
+    int speed = 0-1;
+    
     public Ballon()
     {
         ballon.scale(50,50);
@@ -20,11 +22,18 @@ public class Ballon extends Actor
         setImage(ballon);
     }
     
+    public void increaseSpeed(int speed1)
+    {
+        speed = speed1;
+    }
+    
     public void act()
     {
         
-        move(-1);
         MyWorld w = (MyWorld)getWorld();
+        
+        move(speed);
+        
         if(getY() >= w.getHeight())
         {
             w.gameOver();
