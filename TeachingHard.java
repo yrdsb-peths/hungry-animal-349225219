@@ -10,9 +10,10 @@ public class TeachingHard extends World
 {
     Label rule = new Label("press space to shoot the arrow, destroy the ballon", 30);
     Label rule1 = new Label("If you let the ballon drop to the ground or tounch the rock, you fail!", 30);
-    Label rule2 = new Label("press a to move left, press d to move right, press w to move up, press s to move down", 30);
-    Label rule3 = new Label("otherwise, have fun!", 30);
-    Label rule4 = new Label("press space to start!", 30);
+    Label rule2 = new Label("press a to move left, press d to move right", 30);
+    Label rule3 = new Label("press w to move up, press s to move down", 30);
+    Label rule4 = new Label("otherwise, have fun!", 30);
+    Label rule5 = new Label("press space to start!", 30);
         
     /**
      * Constructor for objects of class TeachingHard.
@@ -21,12 +22,14 @@ public class TeachingHard extends World
     public TeachingHard()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
-        addObject(rule,640,100);
-        addObject(rule1,640,200);
-        addObject(rule2,640,300);
-        addObject(rule3,640,400);
-        addObject(rule4,640,500);
+        super(852, 480, 1); 
+        addObject(rule,426,100);
+        addObject(rule1,426,150);
+        addObject(rule2,426,200);
+        addObject(rule3,426,250);
+        addObject(rule4,426,300);
+        addObject(rule5,426,350);
+        setBackground(new GreenfootImage("background.png"));
         
     }
     

@@ -21,12 +21,13 @@ public class TeachingEasy extends World
     public TeachingEasy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        addObject(rule,300,100);
-        addObject(rule1,300,150);
-        addObject(rule2,300,200);
-        addObject(rule3,300,250);
-        addObject(rule4,300,300);
+        super(852, 480, 1);
+        addObject(rule,426,100);
+        addObject(rule1,426,150);
+        addObject(rule2,426,200);
+        addObject(rule3,426,250);
+        addObject(rule4,426,300);
+        setBackground(new GreenfootImage("background.png"));
     }
     
     public void act()

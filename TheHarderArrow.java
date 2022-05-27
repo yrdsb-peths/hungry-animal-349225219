@@ -14,11 +14,12 @@ public class TheHarderArrow extends Actor
      */
     MyWorld world = (MyWorld) getWorld();
     GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
+    GreenfootImage harderArrow = new GreenfootImage("arrow.png");
     
     public TheHarderArrow()
     {
         setRotation(270);
-        setImage("arrow.png");
+        setImage(harderArrow);
     }
     
     public void hit()
