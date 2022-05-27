@@ -1,17 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FallingRock here.
+ * This is the falling rock class, it is for the harder version of the game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class FallingRock extends Actor
 {
-    /**
-     * Act - do whatever the FallingRock wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     public FallingRock()
     {
         setImage("rock.png");
@@ -25,6 +22,7 @@ public class FallingRock extends Actor
     public void act()
     {
         fall();
+        
         MyWorld1 w = (MyWorld1)getWorld();
         if(isTouching(MonkeyShooterHarder.class))
         {
@@ -32,7 +30,6 @@ public class FallingRock extends Actor
         }
         if(getY() == 480)
         { 
-            
             w.createRock();
         }
     }

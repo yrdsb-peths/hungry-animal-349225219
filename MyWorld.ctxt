@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ the\ world\ for\ the\ easier\ version\ of\ the\ game\r\n\ \r\n\ @author\ George\ Lu\r\n\ @version\ May\ 2022\r\n
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=
@@ -8,9 +8,9 @@ comment2.target=void\ gameOver()
 comment3.params=
 comment3.target=void\ increaseScore()
 comment4.params=
-comment4.target=void\ act()
+comment4.target=void\ createBallon()
 comment5.params=
-comment5.target=void\ createBallon()
+comment5.target=void\ beingShot()
 comment6.params=
-comment6.target=void\ beingShot()
+comment6.target=void\ act()
 numComments=7

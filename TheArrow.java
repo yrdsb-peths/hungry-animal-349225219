@@ -1,22 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TheArrow here.
+ * The arrow class for the easier version, create a arrow.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class TheArrow extends Actor
 {
-    /**
-     * Act - do whatever the TheArrow wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
-    MyWorld world = (MyWorld) getWorld();
     GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
-    
-    
     
     public TheArrow()
     {
@@ -39,7 +31,5 @@ public class TheArrow extends Actor
     {
         move(3);
         hit();
-        
-        
     }
 }

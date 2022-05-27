@@ -1,33 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * This is the world for the easier version of the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class MyWorld extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
     public int positionXMonkey;
     public int positionYMonkey;
     private SimpleTimer timer = new SimpleTimer();
     public int score = 0;
-    Label theScore;
-    int level = -1;
+    private Label theScore;
+    private int level = -1;
     
-
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(852, 480, 1,false); 
         setBackground(new GreenfootImage("background.png"));
         positionXMonkey = 400;
         positionYMonkey = 400;
+        
         theScore = new Label(0,50);
         addObject(theScore, 20, 20);
         
@@ -35,6 +29,7 @@ public class MyWorld extends World
     
         MonkeyShooter monkey = new MonkeyShooter();
         addObject(monkey, positionXMonkey, positionYMonkey);
+        
         createBallon();
         
     }
@@ -53,14 +48,6 @@ public class MyWorld extends World
         {
             level--;
         }
-    }
-    
-    
-    
-    public void act()
-    {
-        beingShot();
-        
     }
     
     public void createBallon()
@@ -84,5 +71,10 @@ public class MyWorld extends World
             }
             
         }
+    }
+    
+    public void act()
+    {
+        beingShot();
     }
 }

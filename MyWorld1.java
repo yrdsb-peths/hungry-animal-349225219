@@ -1,23 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld1 here.
+ * The world for harder version of the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
+
 public class MyWorld1 extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld1.
-     * 
-     */
     public int positionXMonkeyH;
     public int positionYMonkeyH;
     private SimpleTimer timer = new SimpleTimer();
     public int score = 0;
-    Label theScore;
+    private Label theScore;
     
     public MyWorld1()
     {
@@ -25,6 +21,7 @@ public class MyWorld1 extends World
         setBackground(new GreenfootImage("background.png"));
         positionXMonkeyH = 400;
         positionYMonkeyH = 400;
+        
         theScore = new Label(0,50);
         addObject(theScore, 20, 20);
         
@@ -32,6 +29,7 @@ public class MyWorld1 extends World
     
         MonkeyShooterHarder monkey = new MonkeyShooterHarder();
         addObject(monkey, positionXMonkeyH, positionYMonkeyH);
+        
         createBallon();
         createRock();
         
@@ -57,12 +55,6 @@ public class MyWorld1 extends World
         theScore.setValue(score);
     }
     
-    public void act()
-    {
-        beingShot();
-        
-    }
-    
     public void createBallon()
     {
         TheHarderBallon ballon = new TheHarderBallon();
@@ -81,9 +73,12 @@ public class MyWorld1 extends World
                 addObject(arrow, positionXMonkeyH, positionYMonkeyH);
                 timer.mark();
             }
-            
         }
     }
     
+    public void act()
+    {
+        beingShot();
+    }
     
 }

@@ -1,18 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TheHarderArrow here.
+ * The arrow class for the harder version of the game, create a arrow.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class TheHarderArrow extends Actor
 {
-    /**
-     * Act - do whatever the TheHarderArrow wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    MyWorld world = (MyWorld) getWorld();
     GreenfootSound ballonBlow = new GreenfootSound("ballonBlowSound.wav");
     GreenfootImage harderArrow = new GreenfootImage("arrow.png");
     

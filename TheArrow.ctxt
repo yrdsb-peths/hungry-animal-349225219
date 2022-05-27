@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TheArrow
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TheArrow\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ arrow\ class\ for\ the\ easier\ version,\ create\ a\ arrow.\r\n\ \r\n\ @author\ George\ Lu\r\n\ @version\ May\ 2022\r\n
 comment1.params=
 comment1.target=TheArrow()
 comment2.params=

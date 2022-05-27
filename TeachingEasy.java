@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TeachingEasy here.
+ * The game rule of easier version
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class TeachingEasy extends World
 {
@@ -14,13 +14,8 @@ public class TeachingEasy extends World
     Label rule3 = new Label("otherwise, have fun!", 30);
     Label rule4 = new Label("press space to start!", 30);
     
-    /**
-     * Constructor for objects of class TeachingEasy.
-     * 
-     */
     public TeachingEasy()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(852, 480, 1);
         addObject(rule,426,100);
         addObject(rule1,426,150);

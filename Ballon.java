@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ballon here.
+ * The ballon class for the easier version of the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu
+ * @version May 2022
  */
 public class Ballon extends Actor
 {
     /**
-     * Act - do whatever the Ballon wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * This actor will be ballon that need to be destory.
+     * Destory one ballon will earn one mark.
      */
+    
     GreenfootImage ballon = new GreenfootImage("ballon.png");
-    int speed = 0-1;
+    int speed = -1;
     
     public Ballon()
     {
@@ -29,7 +30,6 @@ public class Ballon extends Actor
     
     public void act()
     {
-        
         MyWorld w = (MyWorld)getWorld();
         
         move(speed);
